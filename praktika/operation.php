@@ -11,5 +11,7 @@ echo $i
 <?php
 $str1 = 'parejgunas ';
 $str2 = 'isanje';
-echo $str1 .$str2;
+echo $str1 . $str2;
 ?>
+<h2>операции сравнения</h2>
+<p> |<| |>| |==| |!=| |<=| |>=|</p>
