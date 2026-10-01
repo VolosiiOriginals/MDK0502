@@ -40,13 +40,21 @@ echo $multiplicationResult;
 ?>
 <h2>Задача №4</h2>
 <?php
-
-
+$days = 3;
+$currentDistance = 10.0;
+$total = $currentDistance;
+for ($i = 2; $i <= $days; $i++) {
+    $currentDistance *=1.1;
+    $total +=$currentDistance;
+}
+echo "Путь за $days дней -  $total"
 ?> 
 <h2>Задача №5</h2>
 <?php
-
-
+for ($y = 0; $y <= 16; $y++) {
+    $x = 32 - 2 * $y;
+    echo "($y, $x)";
+}
 ?>
 </body>
 </html>
