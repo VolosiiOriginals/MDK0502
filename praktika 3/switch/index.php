@@ -224,42 +224,41 @@ switch ($k)
 ?>
 <h2>Задача №5</h2>
 <form>
-
-
-
+<p>ВВЕДИТЕ ЧИСЛО</p>
+<input name="mas">
+<input type="submit">
 </form>
 <?php
-
-$u = 3;      
-$m = 250;  
-
-    switch ($u) {
-        case 1: 
-            return $m * 1;
-            break;
-        case 2: 
-            return $m * 0.000001;
-            break;
-        case 3: 
-            return $m * 0.001;
-            break;
-        case 4: 
-            return $m * 1000;
-            break;
-        case 5: 
-            return $m * 100;
-            break;
-        default:
-            echo "н"; 
-    }
+$un = 2;
+$m = 5000;
+$mk = 0;
+if(isset($_GET['mas'])) {
+    $unitNumber = $_GET['mas'];
 
 
-
-
-
-
-
-
+switch ($unitNumber) {
+    case 1:
+        $mk = $m;
+        break;
+    case 2:
+        $mk = $m * 0.000001;
+        break;
+    case 3:
+        $mk= $m * 0.001;
+        break;
+    case 4:
+        $mk = $m * 1000;
+        break;
+    case 5:
+        $mk = $m * 100;
+        break;
+    default:
+        echo "Выберите от 1 до 5.";
+        exit;
+}
+}
+echo "Масса в килограммах: " . $mk;
+?>
 
 </body>
 </html>
